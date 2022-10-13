@@ -1,0 +1,27 @@
+<div class="authentication-container">
+  <div class="title">
+    {{action}}
+  </div>
+  <form class="authentication-form" action="">
+    <div>
+      <div>Username</div>
+      <input type="text" id="username" name="username">
+    </div>
+    <div>
+      <div>Password</div>
+      <input type="password" id="password" name="password">
+    </div>
+    <div>
+      <button id="authentication" type="submit">{{action}}</button>
+    </div>
+    <div>
+      {{#if (isLogin action)}}
+      <a href="./signup">Sign Up instead</a>
+      {{else}}
+      <a href="./login">Login instead</a>
+      {{/if}}
+    </div>
+  </form> 
+</div>
+  
+<script src='/javascript/authentication.js'></script>

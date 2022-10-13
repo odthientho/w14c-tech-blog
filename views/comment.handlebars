@@ -1,0 +1,13 @@
+<ul class="flex flex-column">
+    {{#each posts as | post |}}
+        {{> post-list}}
+    {{/each}}
+</ul>
+<div class="comment-form-container">
+    <div class="title">Leave Your Comment</div>
+    <form id="comment-form-{{posts.0.id}}" class="comment-form" action="">
+        <textarea type="text" id="comment-area" name="comment"></textarea>
+        <button id="comment-submit" type="submit">Submit</button>
+    </form>
+</div>
+<script src='/javascript/comments.js'></script>

@@ -1,0 +1,20 @@
+    <li class="a-post">
+        <div class="title">
+            <a href="/api/posts/{{id}}">{{title}}</a>
+            <span class="info">
+                Posted by {{user.username}} on {{date_formated date_created}}
+            </span>
+        </div>
+        <div class="content">
+            {{content}}
+        </div>
+        <button id="comment-btn-{{id}}" class="comment-btn">Show Comments</button>
+        <ul id="comments_{{id}}" class="comments" style="display: none"> 
+            {{#each comments as | comment |}}
+            <li>
+                <span class='comment_content'>{{comment.content}}</span>
+                <span class='comment_author'>{{comment.user.username}} [{{date_formated comment.date_created}}]</span>
+            </li>
+            {{/each}}
+        </ul>
+    </li>

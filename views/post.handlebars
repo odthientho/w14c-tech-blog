@@ -1,0 +1,21 @@
+<div class="edit-post">
+    <div class="title">
+        {{#if (isEdit action)}}
+            Edit Post
+        {{else}}
+            New Post
+        {{/if}}
+    </div>
+    <div class="post-info">
+        {{> post-input}}
+    </div>
+    <div class="post-action">
+    {{#if (isEdit action)}}
+        <button id="update-post-btn-{{post.id}}" class="update-post-btn">Update</button>
+        <button id="delete-post-btn-{{post.id}}" class="delete-post-btn">Delete</button>
+    {{else}}
+        <button id="new-post-btn-{{post.id}}" class="new-post-btn">Submit</button>
+    {{/if}}
+    </div>
+</div>
+<script src='/javascript/posts.js'></script>

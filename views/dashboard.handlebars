@@ -1,0 +1,8 @@
+<a href="/newpost" class="new-post-a">+ New Post</a>
+<ul class="flex flex-column">
+    {{#each posts as | post |}}
+        <a href="/api/posts/{{id}}/edit" class="edit-post-btn">edit</a>
+        {{> post-list}}
+    {{/each}}
+</ul>
+<script src='/javascript/comments.js'></script>
