@@ -8,7 +8,7 @@ const postData = [
   },
   {
     title: "Authentication vs. Authorization",
-    content: "There i a difference between authentication and authorization. Authentication means confirming your own identity, whereas authorization means being allowed access to the system.",
+    content: "There is a difference between authentication and authorization. Authentication means confirming your own identity, whereas authorization means being allowed access to the system.",
     user_id: 2
   },
 ];
